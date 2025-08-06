@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState, type JSX } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText as GSAPSplitText } from 'gsap/SplitText';
@@ -136,6 +136,7 @@ export default function SplitText({
     };
   }, [text, delay, duration, ease, splitType, from, to, threshold, rootMargin, onLetterAnimationComplete]);
 
+
   return (
     <p
       ref={ref}
@@ -146,6 +147,7 @@ export default function SplitText({
       }}
     >
       {text}
+      <p className='text-gray-400 text-xl font-light'>Decouvrez votre compatibilite</p>
     </p>
   );
 }

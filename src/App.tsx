@@ -1,10 +1,15 @@
+import type { create } from 'motion/react-client';
 import { SplitText } from './components';
+import Form from './components/form';
 
 export default function App() {
   return (
-    <main className="w-full h-screen flex items-center justify-center">
+    <main className="flex flex-col justify-evenly w-full h-screen items-center bg-gray-100">
+      <div className='flex flex-col justify-evenly w-1/2 h-5/6 items-center bg-white rounded-2xl'>
+
+      <img src="public\heart.png" alt="" className='w-28'/>
       <SplitText
-        text="Hello les k4, how are you?"
+        text="Love Match"
         className="text-5xl font-semibold text-center"
         delay={100}
         duration={0.6}
@@ -16,6 +21,8 @@ export default function App() {
         rootMargin="-100px"
         textAlign="center"
       />
+      <Form></Form>
+      </div>
     </main>
   );
 }
